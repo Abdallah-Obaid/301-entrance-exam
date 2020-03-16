@@ -2,7 +2,7 @@
 var arrayWhat=[];
 var arraydate=[];
 getItem1();
-// getItem2();
+getItem2();
 var formy =document.getElementById('formy');
 formy.addEventListener('submit',function (event) {
    event.preventDefault()
@@ -55,5 +55,5 @@ function getItem2(){
     var save2=localStorage.getItem('arraydate')
     if (JSON.parse(save2)!=null){
         arraydate=JSON.parse(save2)}
-    arraydate=JSON.parse(save2)
+
 }
