@@ -1,6 +1,12 @@
 'use strict'
 var arrayWhat=[];
 var arraydate=[];
+function Abdallah(date,what){
+    this.arrayWhat=[];
+    this.arraydate=[];
+    arrayWhat.push(date);
+    arraydate.push(what);
+}
 getItem1();
 getItem2();
 var formy =document.getElementById('formy');
@@ -16,6 +22,7 @@ setItem1();
 setItem2();
 renderlist();
 });
+
 console.log(arrayWhat)
 console.log(arraydate)
 
@@ -26,11 +33,14 @@ function renderlist(){
     var liel=document.createElement('li')
     ulel.appendChild(liel)
     for (var i = 0; i < arrayWhat.length; i++) {
+        
         liel.textContent=`${i+1}. ${arrayWhat[i]}`
         var pel=document.createElement('p')
         liel.appendChild(pel)
+        liel.setAttribute('id','mel')
         pel.textContent=arraydate[i]
         pel.setAttribute('id','pel')
+        
 
     }  
     
